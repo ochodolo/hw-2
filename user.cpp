@@ -36,3 +36,15 @@ void User::dump(std::ostream& os)
 {
     os << name_ << " "  << balance_ << " " << type_ << endl;
 }
+
+std::vector<Product*>& User::getCart() {
+  return cart_;
+}
+
+void User::addToCart(Product* p){
+  cart_.push_back(p);
+}
+
+void User::setCart(const std::vector<Product*>& newCart) {
+  cart_ = newCart;
+}
